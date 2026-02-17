@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>__PKG_NAME__</name>
+  <version>0.0.1</version>
+	<author email="__AUTHOR_EMAIL__">__AUTHOR_NAME__</author>	
+  <description>__DESCRIPTION__</description>
+
+	<!-- List of maintainers -->
+	<maintainer email="ros-developers@robotnik.es">Robotnik Developers</maintainer>
+  
+	<license>__LICENSE__</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+	<build_depend>rcomponent</build_depend>
+  <build_depend>rclcpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

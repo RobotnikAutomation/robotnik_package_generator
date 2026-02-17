@@ -1,0 +1,5 @@
+---
+/**:
+  __NODE_NAME__:
+    ros__parameters:
+      dummy: true
