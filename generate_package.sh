@@ -25,7 +25,7 @@ case "$VISIBILITY_OPTION" in
     1)
         PKG_VISIBILITY="public"
 				LICENSE="BSD-3-Clause"
-        LICENSE_FILE="BDS_LICENSE.md"
+        LICENSE_FILE="BSD_LICENSE.md"
         ;;
     2)
         PKG_VISIBILITY="private"
