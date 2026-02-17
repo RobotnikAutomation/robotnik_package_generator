@@ -6,5 +6,6 @@ else
 	echo "Directory 'robotnik_package_generator' already exists. Skipping clone."
 fi
 
-cd robotnik_package_generator
-./generate_package.sh
+./robotnik_package_generator/generate_package.sh
+
+rm -rf get_generator.sh
