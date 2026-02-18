@@ -14,6 +14,8 @@ echo "============================="
 echo "Robotnik ROS2 Package Generator"
 echo "============================="
 
+# Check email format
+
 # --- Ask if the package is public or private ---
 echo "Is the package public or private?"
 echo "1) Public"
@@ -112,11 +114,11 @@ echo "Agregando licencia a archivos de código..."
 if [[ "$PKG_TYPE" == "rclcpp" ]]; then
     # Para C++ usar //
     sed 's/^/\/\/ /' "$OUTPUT_DIR/LICENSE.md" > /tmp/license_header
-    find "$OUTPUT_DIR" -type f \( -name "*.cpp" -o -name "*.hpp" \) -exec sh -c 'cat /tmp/license_header "$1" > "$1.tmp" && mv "$1.tmp" "$1"' _ {} \;
+    find "$OUTPUT_DIR" -type f \( -name "*.cpp" -o -name "*.hpp" \) -exec sh -c '(cat /tmp/license_header; echo -e "\n"; cat "$1") > "$1.tmp" && mv "$1.tmp" "$1"' _ {} \;
 elif [[ "$PKG_TYPE" == "rclpy" ]]; then
     # Para Python usar #
     sed 's/^/# /' "$OUTPUT_DIR/LICENSE.md" > /tmp/license_header
-    find "$OUTPUT_DIR" -type f -name "*.py" -exec sh -c 'cat /tmp/license_header "$1" > "$1.tmp" && mv "$1.tmp" "$1"' _ {} \;
+    find "$OUTPUT_DIR" -type f -name "*.py" -exec sh -c '(cat /tmp/license_header; echo -e "\n"; cat "$1")> "$1.tmp" && mv "$1.tmp" "$1"' _ {} \;
 fi
 rm -f /tmp/license_header
 
