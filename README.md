@@ -54,7 +54,8 @@ Move the generated package to your ROS 2 workspace and build it to start using i
 
 ```
 mv mock_package ~/ros2_ws/src
-git clone -b ros2-devel https://github.com/RobotnikAutomation/rcomponent.git ~/ros2_ws/src/rcomponent
+cd ~/ros2_ws/src
+git clone -b ros2-devel https://github.com/RobotnikAutomation/rcomponent.git
 cd ~/ros2_ws
 colcon build --symlink-install
 source install/setup.bash

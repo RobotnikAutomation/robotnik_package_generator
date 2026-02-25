@@ -139,4 +139,4 @@ find "$OUTPUT_DIR" -depth -type d -name "*__PKG_NAME__*" | while read d; do
 done
 
 echo "---------------------------------"
-echo "Package $PKG_NAME generated successfully in $OUTPUT_DIR"
+echo -e "\e[32mPackage $PKG_NAME generated successfully\e[0m"
