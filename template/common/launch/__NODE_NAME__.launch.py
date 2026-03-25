@@ -9,19 +9,26 @@ def generate_launch_description():
 
 	node_ns = LaunchConfiguration("node_ns", default="robot")
 	use_sim = LaunchConfiguration("use_sim", default="true")
+	frequency = LaunchConfiguration("frequency", default="1.0")
+	autostart = LaunchConfiguration("autostart", default="true")
+
 
 	config = PathJoinSubstitution([
 		FindPackageShare('__PKG_NAME__'),
 		'config',
-		'config.yaml'
+		'__NODE_NAME___params.yaml'
 	])
 
 	laser_scan = Node(
 		package="__PKG_NAME__",
 		executable="__NODE_NAME___node",
 		name="__NODE_NAME__",
-		parameters=[config, {'use_sim_time': use_sim}],
-	)
+		parameters=[
+			config, 
+			{'use_sim_time': use_sim},
+			{'frequency': frequency},
+			{'autostart': autostart}
+		],	)
 
 	group = GroupAction([
 		PushRosNamespace(node_ns),

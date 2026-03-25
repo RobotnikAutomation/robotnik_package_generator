@@ -13,4 +13,7 @@ class __CLASS_NAME__ : public Rcomponent
 
 	private:
 
+		// Periodic control loop (timer-driven), executed at a
+		// fixed frequency by Rcomponent
+		void control_loop() override;
 };
