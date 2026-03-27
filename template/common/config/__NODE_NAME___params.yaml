@@ -2,4 +2,9 @@
 /**:
   __NODE_NAME__:
     ros__parameters:
-      dummy: true
+      chatter_publisher:
+        topic: "chatter"
+        qos_depth: 10
+      listener_subscriber:
+        topic: "listener"
+        qos_depth: 10
