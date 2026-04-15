@@ -74,7 +74,7 @@ void __CLASS_NAME__::rc_loop()
 	rc_publisher_->publish(msg);
 }
 
-rcomponent::CallbackReturn __CLASS_NAME__::rc_dectivate()
+rcomponent::CallbackReturn __CLASS_NAME__::rc_deactivate()
 {
 	RCOMPONENT_INFO("__CLASS_NAME__ deactivate");
 	publisher_->on_deactivate();

@@ -22,8 +22,9 @@ add_executable(__NODE_NAME___node
 )
 
 ament_target_dependencies(__NODE_NAME___node
+	rclcpp
 	rcomponent
-  rclcpp
+	std_msgs
 )
 
 if(BUILD_TESTING)

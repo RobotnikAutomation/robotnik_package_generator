@@ -21,7 +21,7 @@ class __CLASS_NAME__ : public rcomponent::Rcomponent
 
 		rcomponent::CallbackReturn rc_configure() override;
     rcomponent::CallbackReturn rc_activate() override;
-		rcomponent::CallbackReturn rc_dectivate() override;
+		rcomponent::CallbackReturn rc_deactivate() override;
 		rcomponent::CallbackReturn rc_cleanup() override;
 		rcomponent::CallbackReturn rc_shutdown() override;
 		rcomponent::CallbackReturn rc_error() override;
