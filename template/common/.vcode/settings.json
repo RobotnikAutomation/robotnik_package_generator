@@ -1,0 +1,19 @@
+{
+  "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+  "cmake.generateCompileCommands": true,
+  "ros.distro": "jazzy",
+  "ros.installPath": "/opt/ros/jazzy",
+  "cmake.buildDirectory": "build",
+  "cmake.configureOnOpen": true,
+  "editor.formatOnSave": false,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"cmake.ignoreCMakeListsMissing": true
+
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": false
+  }
+
+}
