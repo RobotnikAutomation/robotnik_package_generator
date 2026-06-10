@@ -4,5 +4,8 @@
 # Ignore vscode folder
 .vscode/
 
+# Ignore pycache
+__pycache__
+
 # Ignore temporal files from .deb generation
 *.ddeb

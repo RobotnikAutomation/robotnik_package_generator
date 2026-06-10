@@ -51,3 +51,6 @@ ros2 launch __PKG_NAME__ __PKG_NAME__.launch.py
 ### Actions
 
 ### Parameters
+
+---
+*Package generated with [robotnik_package_generator](https://github.com/RobotnikAutomation/robotnik_package_generator) on __DATE__.*

@@ -35,8 +35,7 @@ class __CLASS_NAME__ : public rcomponent::Rcomponent
 
 		// --- User space ---
 
-		rclcpp_lifecycle::LifecyclePublisher<std_msgs::msg::String>::SharedPtr publisher_;
-		rclcpp::Subscription<std_msgs::msg::String>::SharedPtr subscriber_;
+		void on_message(std_msgs::msg::String::SharedPtr msg);
 		
 		rcomponent::Publisher<std_msgs::msg::String>::SharedPtr rc_publisher_;
 		rcomponent::Subscriptor<std_msgs::msg::String>::SharedPtr rc_subscriptor_;

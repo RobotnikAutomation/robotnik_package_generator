@@ -98,6 +98,7 @@ replace_tokens() {
         -e "s/__AUTHOR_NAME__/$AUTHOR_NAME/g" \
         -e "s/__AUTHOR_EMAIL__/$AUTHOR_EMAIL/g" \
 				-e "s/__CURRENT_YEAR__/$(date +%Y)/g" \
+        -e "s/__DATE__/$(date +%Y-%m-%d)/g" \
         -e "s/__LICENSE__/$LICENSE/g" {} +
 }
 
